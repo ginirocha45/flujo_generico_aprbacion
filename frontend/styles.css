@@ -1,0 +1,41 @@
+body {font-family: Arial, sans-serif; background-color: #f4f7f6; color: #333; margin: 0; padding: 20px;}
+.container {max-width: 800px; margin: 0 auto; background-color: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);}
+h1, h2 {color: #0056b3;}
+.tabs {display: flex; border-bottom: 2px solid #ccc; margin-bottom: 20px;}
+.tab-button {padding: 10px 20px; cursor: pointer; border: none; background-color: transparent; font-size: 16px; position: relative; color: #555;}
+.tab-button.active {border-bottom: 2px solid #007bff; font-weight: bold; color: #0056b3;}
+.tab-content {display: none;}
+.tab-content.active {display: block;}
+.badge {background-color: #dc3545; color: white; border-radius: 50%; padding: 2px 6px; font-size: 12px; position: absolute; top: 5px; right: 5px;}
+.form-group {margin-bottom: 15px;}
+label {display: block; margin-bottom: 5px; font-weight: bold;}
+input[type="text"], textarea, select {width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box;}
+.btn {background-color: #007bff; color: white; padding: 10px 15px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px;}
+.btn:hover {background-color: #0056b3;}
+.card {background-color: #ffffff; border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 1px 4px rgba(0,0,0,0.05);}
+.solicitud-card {border-left: 5px solid; padding-left: 15px;}
+.solicitud-card p {margin: 5px 0;}
+.solicitud-card strong {color: #555;}
+.status {padding: 3px 8px; border-radius: 12px; color: white; font-weight: bold; text-transform: capitalize;}
+.status-pendiente {background-color: #ffc107; color: #333;}
+.solicitud-card.status-pendiente { border-left-color: #ffc107; }
+.status-aprobado {background-color: #28a745;}
+.solicitud-card.status-aprobado { border-left-color: #28a745; }
+.status-rechazado {background-color: #dc3545;}
+.solicitud-card.status-rechazado { border-left-color: #dc3545; }
+.solicitud-acciones {margin-top: 15px; background-color: #f9f9f9; border: 1px solid #eee; padding: 10px; border-radius: 4px;}
+.solicitud-acciones .btn-aprobar { background-color: #28a745; margin-right: 10px; }
+.solicitud-acciones .btn-aprobar:hover { background-color: #218838; }
+.solicitud-acciones .btn-rechazar { background-color: #dc3545; }
+.solicitud-acciones .btn-rechazar:hover { background-color: #c82333; }
+.error-message {color: #dc3545; font-size: 12px; display: none;}
+.comment-history { margin-top: 15px; padding-left: 15px; border-left: 2px solid #eee; }
+.comment { font-size: 14px; margin-bottom: 5px; }
+/* CAMBIO: Nuevo estilo para la barra de filtro */
+.filter-bar {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+}

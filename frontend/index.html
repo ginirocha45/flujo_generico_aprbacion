@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Aprobaciones</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Flujo Genérico de Aprobación</h1>
+            <!-- CAMBIO: Se eliminó el selector de usuario global de aquí -->
+        </header>
+
+        <div class="tabs">
+            <button class="tab-button active" data-tab="crear">Crear Nueva Solicitud</button>
+            <!-- CAMBIO: Nombre de la pestaña simplificado -->
+            <button class="tab-button" data-tab="bandeja">
+                Bandeja de Entrada
+                <span id="notification-badge" class="badge" style="display: none;">0</span>
+            </button>
+        </div>
+
+        <main>
+            <div id="crear" class="tab-content active">
+                <section class="card">
+                    <h2>Formulario de Solicitud</h2>
+                    <form id="formulario-solicitud">
+                        <!-- ... (los campos título, nit, tipo, descripción no cambian) ... -->
+                        <div class="form-group">
+                            <label for="titulo">Título</label>
+                            <input type="text" id="titulo" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nit-cliente">NIT Cliente</label>
+                            <input type="text" id="nit-cliente" placeholder="900123456" required>
+                            <small id="nit-error" class="error-message"></small>
+                        </div>
+                        <div class="form-group">
+                            <label for="tipo-solicitud">Tipo de Solicitud</label>
+                            <select id="tipo-solicitud" required>
+                                <option value="" disabled selected>Seleccione un tipo...</option>
+                                <option value="despliegue">Despliegue</option>
+                                <option value="acceso">Acceso</option>
+                                <option value="cambio-tecnico">Cambio Técnico</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="descripcion">Descripción</label>
+                            <textarea id="descripcion" rows="3"></textarea>
+                        </div>
+                        <!-- CAMBIO: Campo Solicitante ahora es editable -->
+                        <div class="form-group">
+                            <label for="solicitante">Solicitante (tu usuario de red)</label>
+                            <input type="text" id="solicitante" placeholder="tu.usuario" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="responsable">Responsable de Aprobar</label>
+                            <input type="text" id="responsable" placeholder="usuario.responsable" required>
+                        </div>
+                        <button type="submit" class="btn">Enviar Solicitud</button>
+                    </form>
+                </section>
+            </div>
+
+            <div id="bandeja" class="tab-content">
+                <section>
+                    <!-- CAMBIO: Añadido un campo para filtrar por usuario -->
+                    <div class="filter-bar">
+                        <label for="user-view-input">Ver historial y bandeja de (ingresa tu usuario):</label>
+                        <input type="text" id="user-view-input" placeholder="tu.usuario">
+                    </div>
+                    <h2>Mi Historial y Bandeja de Entrada</h2>
+                    <div id="lista-solicitudes">
+                        <p>Ingresa tu usuario para ver tus solicitudes.</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>

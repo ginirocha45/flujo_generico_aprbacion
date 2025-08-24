@@ -1,0 +1,40 @@
+{
+  "solicitudes": [
+    {
+      "id": "1d5714bf-7e7d-4b63-b30f-50aa72976146",
+      "titulo": "Título de prueba desde Postman",
+      "nit": "987654321-0",
+      "tipo": "acceso",
+      "descripcion": "Petición de prueba desde Postman sin título",
+      "solicitante": "postman.tester",
+      "responsable": "jefe.area",
+      "estado": "aprobado",
+      "fecha": "23/8/2025, 2:58:13 p. m.",
+      "comentarios": [
+        {
+          "autor": "jefe.area",
+          "texto": "apr",
+          "fecha": "23/8/2025, 3:05:50 p. m."
+        }
+      ]
+    },
+    {
+      "id": "32abbcbb-fba8-4138-9842-c69aeab8f9d6",
+      "titulo": "Solicitud de acceso a la carpeta compartida",
+      "nit": "900123456-7",
+      "tipo": "despliegue",
+      "descripcion": "sdfkjasdfñlkjasdñf",
+      "solicitante": "usuario.general",
+      "responsable": "jefe.area",
+      "estado": "rechazado",
+      "fecha": "23/8/2025, 3:05:11 p. m.",
+      "comentarios": [
+        {
+          "autor": "jefe.area",
+          "texto": "no",
+          "fecha": "23/8/2025, 3:06:03 p. m."
+        }
+      ]
+    }
+  ]
+}
