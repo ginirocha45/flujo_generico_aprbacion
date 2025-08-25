@@ -6,7 +6,7 @@ const { MongoClient } = require('mongodb');
 const testData = [
     {
         titulo: "Acceso a base de datos de marketing",
-        nit: "900123456-7",
+        nit: "900123456",
         tipo: "acceso",
         descripcion: "Se requiere acceso de solo lectura para análisis de campaña.",
         solicitante: "analista.marketing",
@@ -17,7 +17,7 @@ const testData = [
     },
     {
         titulo: "Despliegue de nueva versión del portal de clientes",
-        nit: "800555444-2",
+        nit: "800555444",
         tipo: "despliegue",
         descripcion: "Desplegar la versión 2.1.5 en el entorno de pre-producción.",
         solicitante: "dev.ops",
@@ -34,7 +34,7 @@ const testData = [
     },
     {
         titulo: "Solicitud de cambio técnico en firewall",
-        nit: "901987654-3",
+        nit: "901987654",
         tipo: "cambio-tecnico",
         descripcion: "Abrir puerto 443 para nuevo servicio.",
         solicitante: "admin.redes",

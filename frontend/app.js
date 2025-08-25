@@ -54,8 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const tarjeta = document.createElement('div');
                 tarjeta.className = `card solicitud-card status-${solicitud.estado}`;
                 
-                // --- SECCIÓN MODIFICADA ---
-                // Aquí añadimos todos los campos del formulario para un historial completo.
+                // Añadir todos los campos del formulario para un historial completo.
                 tarjeta.innerHTML = `
                     <h3>${solicitud.titulo}</h3>
                     <p><strong>Estado:</strong> <span class="status status-${solicitud.estado}">${solicitud.estado}</span></p>
@@ -78,7 +77,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     </div>
                     ` : ''}
                 `;
-                // --- FIN DE LA SECCIÓN MODIFICADA ---
 
                 listaSolicitudes.appendChild(tarjeta);
             });

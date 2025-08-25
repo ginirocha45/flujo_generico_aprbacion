@@ -48,12 +48,10 @@ app.post('/solicitudes', async (req, res) => {
 
         const result = await db.collection('solicitudes').insertOne(nuevaSolicitud);
         
-        // --- CORRECCIÓN CLAVE ---
-        // El método moderno para obtener el documento insertado es buscarlo por su ID.
+        // Obtener el documento insertado buscandolo por su ID.
         const solicitudInsertada = await db.collection('solicitudes').findOne({ _id: result.insertedId });
         
         res.status(201).json(solicitudInsertada);
-        // --- FIN DE LA CORRECCIÓN ---
 
     } catch (error) {
         console.error("Error al crear la solicitud:", error);
@@ -62,7 +60,7 @@ app.post('/solicitudes', async (req, res) => {
 });
 
 app.put('/solicitudes/:id', async (req, res) => {
-    // ... (el código del PUT no necesita cambios, pero es bueno añadir try-catch también)
+    
     try {
         const { id } = req.params;
         const { estado, comentario, currentUser } = req.body;
