@@ -1,5 +1,7 @@
 # 🚀 Flujo Genérico de Aprobación - Kata Junior
 
+_Este documento está escrito en formato Markdown, compatible con la sintaxis MDX y optimizado para su visualización en GitHub._
+
 ## 1. Contexto del Proyecto
 
 En muchos entornos corporativos, existen múltiples procesos que requieren la aprobación de un responsable antes de poder ser ejecutados. Estos flujos suelen ser manuales, informales (vía email o chat) o se gestionan a través de diversas herramientas no centralizadas.
@@ -24,12 +26,12 @@ La aplicación sigue una arquitectura cliente-servidor desacoplada, desplegada e
 
 ```mermaid
 graph TD
-    A[Usuario] --> B{Navegador Web};
-    B --> C[Frontend (HTML/CSS/JS)];
-    C -- Peticiones API (HTTP REST) --> D[Backend (Node.js/Express)];
-    D -- Consultas/Comandos --> E[DB (MongoDB Atlas)];
-    E -- Datos --> D;
-    D -- Respuestas (JSON) --> C;
+    A[Usuario] --> B{Navegador Web}
+    B --> C["Frontend (HTML/CSS/JS)"]
+    C -- Peticiones API (HTTP REST) --> D["Backend (Node.js/Express)"]
+    D -- Consultas/Comandos --> E["DB (MongoDB Atlas)"]
+    E -- Datos --> D
+    D -- Respuestas (JSON) --> C
 ```
 
 ### Diagrama de Despliegue (Docker)
@@ -50,9 +52,9 @@ graph TD
         D[Base de Datos NoSQL]
     end
 
-    A -- HTTP --> B;
-    B -- Llama a API --> C;
-    C -- Conexión segura --> D;
+    A -- HTTP --> B
+    B -- Llama a API --> C
+    C -- Conexión segura --> D
 ```
 
 *   El **Usuario** interactúa con el **Frontend** a través de su navegador en el puerto 8080.
@@ -174,5 +176,3 @@ Para revisar y probar la funcionalidad completa de la aplicación, por favor sig
     *   Como `usuario.general`, cree dos solicitudes pendientes.
     *   Intente crear una **tercera** solicitud pendiente.
     *   **Resultado esperado:** Aparecerá una alerta indicando que se ha alcanzado el límite de 2 solicitudes pendientes.
-
----
