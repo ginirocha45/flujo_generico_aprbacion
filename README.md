@@ -93,7 +93,7 @@ Para ejecutar este proyecto en un entorno local, por favor siga estos pasos.
 
 1.  **Clonar el repositorio:**
     ```bash
-    git clone https://github.com/ginirocha45/flujo_generico_aprobacion.git
+    git clone https://github.com/ginirocha45/flujo_generico_aprbacion.git
     cd flujo_generico_aprobacion
     ```
 
